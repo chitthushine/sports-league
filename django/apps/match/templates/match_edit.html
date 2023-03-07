@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ header_label }}</h1>
+  <form method="post">
+    {% csrf_token %}
+    <table>
+      <tbody>
+        <tr>
+          <td>Team 1:</td>
+          <td>{{ form.team_1 }}</td>
+        </tr>
+        <tr>
+          <td>Team 1 Score:</td>
+          <td>{{ form.team_1_score }}</td>
+        </tr>
+        <tr>
+          <td>Team 2:</td>
+          <td>{{ form.team_2 }}</td>
+        </tr>
+        <tr>
+          <td>Team 2 Score:</td>
+          <td>{{ form.team_2_score }}</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <br>
+    <button type="submit">Save</button>
+    <a href="{% url 'match_list' %}" class="btn btn-secondary">Cancel</a>
+  </form>
+{% endblock %}

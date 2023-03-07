@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Match Ranking</h1>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Ranking</th>
+        <th>Team</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for team in ranking_data %}
+        <tr>
+          <td>{{ team.rank }}</td>
+          <td>{{ team.team }}</td>
+          <td>{{ team.points }}</td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="6" class="text-center">No matches found.</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
+
+  
