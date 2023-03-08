@@ -21,12 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-y_*g3-x1^(bt0x*m(085a#xajc_wc&7x!8qreu--%hmi6+=r*e'
+SECRET_KEY = 'CHANGE-ME!!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 LOGIN_REDIRECT_URL = '/match/'
 LOGIN_URL = '/auth/login/'
