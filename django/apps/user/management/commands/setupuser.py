@@ -16,3 +16,4 @@ class Command(BaseCommand):
             sys_admin.is_superuser = True
             sys_admin.is_staff = True
             sys_admin.save()
+            self.stdout.write(self.style.NOTICE('setup superuser finished !!!'))

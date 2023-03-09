@@ -86,7 +86,7 @@ class MatchTestCase(TestCase):
     def test_upload_match_and_ranking(self):
         """
         Test that upload_match_data view can be accessed only by 
-        authenticated user and match csv data can be uploaded. 
+        authenticated user and test match csv data can be uploaded. 
         Then, the ranking function will be tested consecutively.
         Test total count Match objects should be 3 (1 is from setup, 
         2 is from upload).

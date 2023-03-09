@@ -1,7 +1,7 @@
 # Sport League Ranking System
 # Requirement
-* django==3.2
-* python==3.9.11
+* django>=3.2
+* python>=3.9
 * docker (Optional)
 
 # Clone Project 
@@ -12,30 +12,34 @@ git clone https://github.com/chitthushine/sports-league.git
 # Local Setup
 * Create Virtual Environment and install requirements (First Time Only)
 ```
-python -m venv env
+cd sports-league
+python3 -m venv env
 source env/bin/activate
 pip install -r django/requirements.txt
 ```
 
 * Database Setup (First Time Only)
 ```
-cd django && python manage.py migrate
-```
-
-* Run Django
-```
-source env/bin/activate
-cd django && python manage.py runserver
+cd django
+python manage.py migrate
 ```
 
 * Run Unit Test
 ```
-cd django && python manage.py test apps.match.tests
+cd django
+python manage.py test apps.match.tests
 ```
 
-* Create superuser to access admin page (optional)
+* Create superuser to access admin page (optional) (First Time Only)
 ```
-cd django && python manage.py setupuser
+cd django
+python manage.py setupuser
+```
+
+* Run Django
+```
+cd django
+python manage.py runserver
 ```
 
 # Running with Docker
@@ -55,7 +59,7 @@ docker exec -u root -it "$(docker-compose ps -q django)" python manage.py migrat
 docker exec -u root -it "$(docker-compose ps -q django)" python manage.py test apps.match.tests
 ```
 
-* Create superuser to access admin page (optional)
+* Create superuser to access admin page (optional) (First Time Only)
 ```
 docker exec -u root -it "$(docker-compose ps -q django)" python manage.py setupuser
 ```
@@ -65,8 +69,8 @@ docker exec -u root -it "$(docker-compose ps -q django)" python manage.py setupu
 * default url 
   * site : `http://localhost:8000` or `http://127.0.0.1:8000`
   * for admin page, 
-    - username: admin
-    - password: bh>R4!S]
+    - username: `admin`
+    - password: `bh>R4!S]`
 
 
 # Usage
