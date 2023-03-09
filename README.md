@@ -35,7 +35,7 @@ cd django && python manage.py test apps.match.tests
 
 * Create superuser to access admin page (optional)
 ```
-cd django && python manage.py createsuperuser
+cd django && python manage.py setupuser
 ```
 
 # Running with Docker
@@ -57,13 +57,16 @@ docker exec -u root -it "$(docker-compose ps -q django)" python manage.py test a
 
 * Create superuser to access admin page (optional)
 ```
-docker exec -u root -it "$(docker-compose ps -q django)" python manage.py createsuperuser
+docker exec -u root -it "$(docker-compose ps -q django)" python manage.py setupuser
 ```
 
 # Accounts
 
 * default url 
   * site : `http://localhost:8000` or `http://127.0.0.1:8000`
+  * for admin page, 
+    - username: admin
+    - password: bh>R4!S]
 
 
 # Usage

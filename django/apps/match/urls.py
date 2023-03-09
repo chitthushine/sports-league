@@ -9,5 +9,5 @@ urlpatterns = [
     path('<int:pk>/edit/', match_edit, name='match_edit'),
     path('<int:pk>/delete/', match_delete, name='match_delete'),
     path('upload', upload_match_data, name='upload_match_data'),
-    path('ranking', match_ranking, name='match_ranking'),
+    path('ranking/', match_ranking, name='match_ranking'),
 ]
